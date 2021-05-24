@@ -1,0 +1,19 @@
+import { BrowserRouter as Router } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import { StoreContextProvider } from "./contexts/StoreContext";
+
+function App() {
+  return (
+    <StoreContextProvider>
+      <div className="app">
+        <Router>
+          <Navbar />
+          <Home />
+        </Router>
+      </div>
+    </StoreContextProvider>
+  );
+}
+
+export default App;
