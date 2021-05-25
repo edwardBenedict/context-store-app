@@ -32,7 +32,15 @@ nav .nav-cart {
   cursor: pointer;
   position: relative;
   padding: 16px;
+  border-radius: 50%;
 }
+
+nav .nav-cart:hover {
+  background-color: #ac0d0d;
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+}
+
 nav .nav-cart span {
   position: absolute;
   top: 5px;
