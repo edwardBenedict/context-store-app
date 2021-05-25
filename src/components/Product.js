@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { StoreContext } from "../contexts/StoreContext";
 
 const Products = ({ product }) => {
+  const { addCart } = useContext(StoreContext);
+
   return (
     <div className="card">
       <Link to={`/details/${product?.id}`}>
@@ -13,11 +16,7 @@ const Products = ({ product }) => {
         </h3>
         <span>${product?.price}</span>
         <p>{product?.description}</p>
-        <button
-        // onClick={() => addCart(product._id)}
-        >
-          Add to cart
-        </button>
+        <button onClick={() => addCart(product?.id)}>Add to cart</button>
       </div>
     </div>
   );

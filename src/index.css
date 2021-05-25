@@ -30,4 +30,5 @@ section {
   padding: 15px 10px;
   box-shadow: 0 0 5px #ccc;
   margin: 25px;
+  min-width: 300px;
 }

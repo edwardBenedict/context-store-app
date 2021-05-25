@@ -38,7 +38,9 @@ const Details = ({ match }) => {
             </Link>
           </div>
         </div>
-      ) : null}
+      ) : (
+        <p>Nothing Found!</p>
+      )}
     </div>
   );
 };

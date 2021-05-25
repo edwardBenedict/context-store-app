@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import menuSvg from "../assets/menu.svg";
 import cancelSvg from "../assets/cancel.svg";
 import cartSvg from "../assets/cart.svg";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import { StoreContext } from "../contexts/StoreContext";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const { cart } = useContext(StoreContext);
 
   const menuToggle = () => {
     console.log("menuToggle");
@@ -25,7 +27,7 @@ const Navbar = () => {
       <nav>
         <ul className={toggle ? "toggle" : ""}>
           <li>
-            <Link to="/product">Product</Link>
+            <Link to="/">Product</Link>
           </li>
           <li>
             <Link to="/about">About</Link>
@@ -35,7 +37,7 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="nav-cart">
-          <span>0</span>
+          <span>{cart?.length}</span>
           <Link to="/cart">
             <img src={cartSvg} alt="" width="20" />
           </Link>

@@ -54,3 +54,15 @@
   padding: 10px 25px;
   display: inline-block;
 }
+
+.cart-header {
+  text-align: center;
+}
+
+.cart-image {
+  width: 300px;
+}
+
+.empty-cart {
+  text-align: center;
+}
