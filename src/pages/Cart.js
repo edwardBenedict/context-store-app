@@ -53,7 +53,7 @@ const Cart = () => {
           }}
         >
           <div className="empty-cart">
-            <p>Nothing Found!</p>
+            <p>Your cart is empty!</p>
             <Link
               to={`/`}
               style={{
@@ -63,6 +63,7 @@ const Cart = () => {
                 padding: "10px",
                 backgroundColor: "wheat",
                 borderRadius: "10px",
+                color: "black",
               }}
             >
               Go Shopping

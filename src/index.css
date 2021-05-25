@@ -41,4 +41,5 @@ section {
   box-shadow: 0 0 10px #ac0d0d;
   margin: 25px;
   min-width: 300px;
+  border-radius: 5px;
 }

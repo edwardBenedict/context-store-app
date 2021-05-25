@@ -36,12 +36,12 @@ const Navbar = () => {
             <img src={cancelSvg} alt="" width="20" />
           </li>
         </ul>
-        <div className="nav-cart">
-          <span>{cart?.length}</span>
-          <Link to="/cart">
+        <Link to="/cart">
+          <div className="nav-cart">
+            <span>{cart?.length}</span>
             <img src={cartSvg} alt="" width="20" />
-          </Link>
-        </div>
+          </div>
+        </Link>
       </nav>
     </header>
   );
