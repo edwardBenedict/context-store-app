@@ -14,13 +14,20 @@ code {
     monospace;
 }
 
-.app {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-}
+/* .app {
+} */
 
 section {
-  box-shadow: 0 0 5px #ccc;
+  background-color: white;
+  margin-bottom: 25px;
+  margin-top: 50px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 25px auto;
+}
+
+.inner-section {
   padding: 15px 10px;
+  box-shadow: 0 0 5px #ccc;
+  margin: 25px;
 }

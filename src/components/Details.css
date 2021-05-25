@@ -10,12 +10,13 @@
 }
 
 .details img {
-  max-width: 500px;
-  min-width: 290px;
+  /* max-width: 500px;
+  min-width: 290px; */
   height: 300px;
   display: block;
   object-fit: cover;
   margin: 25px;
+  width: auto;
 }
 .details .box {
   max-width: 500px;

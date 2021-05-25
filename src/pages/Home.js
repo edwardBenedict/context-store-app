@@ -7,9 +7,11 @@ import Products from "../components/Products";
 const Sections = () => {
   return (
     <section>
-      <Route path="/" component={Products} exact />
-      {/* <Route path="/product" component={Details} exact /> */}
-      <Route path="/details/:id" component={Details} />
+      <div className="inner-section">
+        <Route path="/" component={Products} exact />
+        {/* <Route path="/product" component={Details} exact /> */}
+        <Route path="/details/:id" component={Details} />
+      </div>
     </section>
   );
 };

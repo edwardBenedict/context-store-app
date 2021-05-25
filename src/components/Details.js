@@ -17,7 +17,7 @@ const Details = ({ match }) => {
 
   return (
     <div>
-      <h1 className="details-header">Details </h1>
+      <h1 className="details-header">Product Details</h1>
       {product ? (
         <div className="details">
           <img src={product?.image} alt={product?.title} width="300" />
