@@ -11,6 +11,7 @@ const Details = ({ match }) => {
   const { addCart } = useContext(StoreContext);
 
   useEffect(() => {
+    setProduct();
     match.params.id &&
       getDetails(`${BASE_URL}products/`, match.params.id).then((res) =>
         setProduct(res.data)
@@ -20,7 +21,9 @@ const Details = ({ match }) => {
   return (
     <div>
       <h1 className="details-header">Product Details</h1>
-      {product ? (
+      {product === undefined ? (
+        <h3 style={{ textAlign: "center" }}>Loading...</h3>
+      ) : product ? (
         <div className="details">
           <img src={product?.image} alt={product?.title} width="300" />
           <div className="box">
@@ -41,7 +44,7 @@ const Details = ({ match }) => {
           </div>
         </div>
       ) : (
-        <p>Nothing Found!</p>
+        <h3 style={{ textAlign: "center" }}>Nothing Found!</h3>
       )}
     </div>
   );
