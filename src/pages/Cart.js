@@ -13,6 +13,7 @@ const Cart = () => {
 
   useEffect(() => {
     getTotal();
+    // eslint-disable-next-line
   }, [cart]);
 
   return (

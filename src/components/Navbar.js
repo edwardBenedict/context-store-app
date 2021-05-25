@@ -21,7 +21,7 @@ const Navbar = () => {
       </div>
       <div className="logo">
         <h1>
-          <Link to="/">Store</Link>
+          <Link to="/">{"<ed8en/>"} Shop</Link>
         </h1>
       </div>
       <nav>
