@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { StoreContext } from "../contexts/StoreContext";
 import { Link } from "react-router-dom";
 import shopSvg from "../assets/shop.svg";
-import closeSvg from "../assets/close.svg";
+import { ReactComponent as CloseSvg } from "../assets/close.svg";
 
 import "../components/Details.css";
 import "./Cart.css";
@@ -41,7 +41,7 @@ const Cart = () => {
               </div>
             </div>
             <div className="delete" onClick={() => removeProduct(item?.id)}>
-              <img src={closeSvg} alt="cancel" style={{}} />
+              <CloseSvg fill="#ac0d0d" stroke="wheat" className="close" />
             </div>
           </div>
         ))
