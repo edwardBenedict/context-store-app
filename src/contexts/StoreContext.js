@@ -2,10 +2,13 @@ import React, { useState, useEffect, createContext } from "react";
 
 export const StoreContext = createContext();
 
+const cartFromLocalStorage = JSON.parse(localStorage.getItem("cartData"));
+const totalFromLocalStorage = JSON.parse(localStorage.getItem("totalData"));
+
 export const StoreContextProvider = ({ children }) => {
   const [products, setProducts] = useState();
-  const [cart, setCart] = useState([]);
-  const [total, setTotal] = useState(0);
+  const [cart, setCart] = useState(cartFromLocalStorage || []);
+  const [total, setTotal] = useState(totalFromLocalStorage || 0);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -71,6 +74,12 @@ export const StoreContextProvider = ({ children }) => {
     }, 0);
     setTotal(totalRes);
   };
+
+  useEffect(() => {
+    console.log("1.useEffect");
+    localStorage.setItem("cartData", JSON.stringify(cart));
+    localStorage.setItem("totalData", JSON.stringify(total));
+  }, [cart, total]);
 
   return (
     <StoreContext.Provider
