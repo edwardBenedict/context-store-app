@@ -5,6 +5,7 @@ import Details from "../components/Details";
 import Products from "../components/Products";
 import Cart from "../pages/Cart";
 import About from "../pages/About";
+import Checkout from "../pages/Checkout";
 
 const Sections = () => {
   return (
@@ -15,6 +16,7 @@ const Sections = () => {
         <Route path="/details/:id" component={Details} />
         <Route path="/cart" component={Cart} />
         <Route path="/about" component={About} />
+        <Route path="/checkout" component={Checkout} />
       </div>
     </section>
   );
