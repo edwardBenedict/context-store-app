@@ -32,7 +32,7 @@ const Details = ({ match }) => {
               <span>${product?.price}</span>
             </div>
 
-            <p>{product?.category}</p>
+            <p className="category">{product?.category}</p>
             <p>{product?.description}</p>
             <Link
               to="/cart"

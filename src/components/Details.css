@@ -67,3 +67,13 @@
 .empty-cart {
   text-align: center;
 }
+
+.category {
+  background-color: #ac0d0d;
+  color: white;
+  align-items: center;
+  display: inline;
+  padding: 5px 8px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}

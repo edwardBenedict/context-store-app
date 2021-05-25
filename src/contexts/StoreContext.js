@@ -76,7 +76,6 @@ export const StoreContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    console.log("1.useEffect");
     localStorage.setItem("cartData", JSON.stringify(cart));
     localStorage.setItem("totalData", JSON.stringify(total));
   }, [cart, total]);

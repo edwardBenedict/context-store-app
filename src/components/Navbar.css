@@ -26,7 +26,7 @@ nav ul li a {
   padding: 0 15px;
 }
 nav ul li a:hover {
-  color: lightseagreen;
+  color: #ac0d0d;
 }
 nav .nav-cart {
   cursor: pointer;
@@ -37,7 +37,7 @@ nav .nav-cart span {
   position: absolute;
   top: 5px;
   right: 5px;
-  background: crimson;
+  background: #ac0d0d;
   font-size: 10px;
   color: white;
   padding: 3px 5px;
