@@ -1,3 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Girassol&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Girassol", cursive;
+}
+
 body {
   margin: 0;
   padding: 0;
