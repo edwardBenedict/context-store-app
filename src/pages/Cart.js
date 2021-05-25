@@ -28,7 +28,7 @@ const Cart = () => {
                 <h2>{item?.title}</h2>
                 <span>${item?.price}</span>
               </div>
-              <p>{item?.category}</p>
+              <p className="category">{item?.category}</p>
               <p>{item?.description}</p>
               <div className="amount">
                 <button className="count" onClick={() => reduction(item?.id)}>
