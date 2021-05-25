@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { getDetails } from "../functions/functions";
+import { StoreContext } from "../contexts/StoreContext";
 import "./Details.css";
 import { Link } from "react-router-dom";
 
@@ -7,6 +8,7 @@ const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 const Details = ({ match }) => {
   const [product, setProduct] = useState();
+  const { addCart } = useContext(StoreContext);
 
   useEffect(() => {
     match.params.id &&
@@ -32,7 +34,7 @@ const Details = ({ match }) => {
             <Link
               to="/cart"
               className="cart"
-              // onClick={() => addCart(item._id)}
+              onClick={() => addCart(product.id)}
             >
               Add to cart
             </Link>
