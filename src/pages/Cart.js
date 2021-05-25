@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { StoreContext } from "../contexts/StoreContext";
 import { Link } from "react-router-dom";
+import shopSvg from "../assets/shop.svg";
 
 import "../components/Details.css";
 import "./Cart.css";
@@ -43,9 +44,36 @@ const Cart = () => {
           </div>
         ))
       ) : (
-        <div className="empty-cart">
-          <p>Nothing Found!</p>
-          <Link to={`/`}>Go Shop</Link>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div className="empty-cart">
+            <p>Nothing Found!</p>
+            <Link
+              to={`/`}
+              style={{
+                textDecoration: "none",
+                display: "block",
+                width: "200px",
+                padding: "10px",
+                backgroundColor: "wheat",
+                borderRadius: "10px",
+              }}
+            >
+              Go Shopping
+            </Link>
+          </div>
+          <img
+            src={shopSvg}
+            alt="goshop"
+            width="100"
+            style={{ alignSelf: "center", margin: "10px" }}
+          />
         </div>
       )}
       <div className="total">
