@@ -5,7 +5,7 @@ header {
   align-items: center;
   overflow: hidden;
   background-color: wheat;
-  box-shadow: 0 0 25px #ccc;
+  box-shadow: 0 0 25px wheat;
 }
 header .logo a {
   text-decoration: none;
@@ -21,7 +21,7 @@ nav ul li {
 }
 nav ul li a {
   text-decoration: none;
-  text-transform: uppercase;
+
   color: #555;
   padding: 0 15px;
 }
