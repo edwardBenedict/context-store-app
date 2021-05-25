@@ -65,3 +65,11 @@
   margin: 15px 0;
   font-weight: bold;
 }
+
+.card-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+}

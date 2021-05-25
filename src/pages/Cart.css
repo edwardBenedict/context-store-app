@@ -22,6 +22,11 @@ section .cart {
   cursor: pointer;
   font-weight: 900;
 }
+
+.delete img {
+  width: 20px;
+  height: auto;
+}
 .total {
   width: 100%;
   height: 50px;
@@ -31,13 +36,16 @@ section .cart {
 }
 .total a {
   text-decoration: none;
-  background: #333;
-  color: white;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
+  background: wheat;
+  color: black;
   letter-spacing: 2px;
   padding: 10px 25px;
 }
 .total h3 {
-  margin-right: 50px;
-  color: crimson;
+  /* margin-right: 50px; */
+  padding: 10px 25px;
+  color: white;
+  letter-spacing: 2px;
+  background-color: crimson;
 }

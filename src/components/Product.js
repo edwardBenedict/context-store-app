@@ -7,9 +7,11 @@ const Products = ({ product }) => {
 
   return (
     <div className="card">
-      <Link to={`/details/${product?.id}`}>
-        <img src={product?.image} alt="" />
-      </Link>
+      <div className="card-image">
+        <Link to={`/details/${product?.id}`}>
+          <img src={product?.image} alt="" />
+        </Link>
+      </div>
       <div className="content">
         <h3>
           <Link to={`/details/${product?.id}`}>{product?.title}</Link>

@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { StoreContext } from "../contexts/StoreContext";
 import { Link } from "react-router-dom";
 import shopSvg from "../assets/shop.svg";
+import closeSvg from "../assets/close.svg";
 
 import "../components/Details.css";
 import "./Cart.css";
@@ -16,7 +17,7 @@ const Cart = () => {
 
   return (
     <div>
-      <h2 className="cart-header">Cart</h2>
+      <h1 className="cart-header">Cart</h1>
       {cart.length !== 0 ? (
         cart?.map((item, index) => (
           <div className="details cart" key={index}>
@@ -39,7 +40,7 @@ const Cart = () => {
               </div>
             </div>
             <div className="delete" onClick={() => removeProduct(item?.id)}>
-              X
+              <img src={closeSvg} alt="cancel" style={{}} />
             </div>
           </div>
         ))
