@@ -8,9 +8,13 @@ const Products = () => {
 
   return (
     <div id="product">
-      {products?.map((product) => (
-        <Product key={product.id} product={product} />
-      ))}
+      {products ? (
+        products?.map((product) => (
+          <Product key={product.id} product={product} />
+        ))
+      ) : (
+        <h2>Loading...</h2>
+      )}
     </div>
   );
 };

@@ -20,7 +20,7 @@
 }
 
 .card:hover {
-  box-shadow: none;
+  box-shadow: -2px -8px 20px #ac0d0d;
 }
 
 .card img {
@@ -40,7 +40,7 @@
 }
 
 .card h3 a:hover {
-  color: crimson;
+  color: #ac0d0d;
 }
 
 .card span {
