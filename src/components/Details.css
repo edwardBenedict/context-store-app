@@ -48,10 +48,10 @@
   margin: 15px 0;
 }
 .box .cart {
-  background: wheat;
-  color: black;
+  background: #343A40;
+  color: white;
   text-decoration: none;
-  padding: 10px 25px;
+  padding: 5px 25px;
   display: inline-block;
   text-transform: uppercase;
 }

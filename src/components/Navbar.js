@@ -1,36 +1,37 @@
 import React, { useState, useContext } from "react";
 import menuSvg from "../assets/menu.svg";
 import cancelSvg from "../assets/cancel.svg";
-import cartSvg from "../assets/cart.svg";
+import cwLogo from "../assets/clarusway.png";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { StoreContext } from "../contexts/StoreContext";
+import Cart from "../assets/icons/Cart";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const { cart } = useContext(StoreContext);
 
   const menuToggle = () => {
-    console.log("menuToggle");
     setToggle(!toggle);
   };
   return (
-    <header>
+    <header style={{ position: "sticky", top: 0 }}>
       <div className="menu" onClick={menuToggle}>
         <img src={menuSvg} alt="" width="20" />
       </div>
       <div className="logo">
-        <h1>
-          <Link to="/">{"<ed8en/>"} Shop</Link>
-        </h1>
+        <Link to="/"><img src={cwLogo} alt="" width="40" /> clarus Shop</Link>
       </div>
       <nav>
         <ul className={toggle ? "toggle" : ""}>
           <li>
-            <Link to="/">Product</Link>
+            <Link to="/" onClick={menuToggle}>Product</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/about" onClick={menuToggle}>About</Link>
+          </li>
+          <li>
+            <Link to="/login" onClick={menuToggle}>Login</Link>
           </li>
           <li className="close" onClick={menuToggle}>
             <img src={cancelSvg} alt="" width="20" />
@@ -39,7 +40,7 @@ const Navbar = () => {
         <Link to="/cart">
           <div className="nav-cart">
             <span>{cart?.length}</span>
-            <img src={cartSvg} alt="" width="20" />
+            <Cart color="white" />
           </div>
         </Link>
       </nav>

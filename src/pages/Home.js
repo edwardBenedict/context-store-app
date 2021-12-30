@@ -6,10 +6,13 @@ import Products from "../components/Products";
 import Cart from "../pages/Cart";
 import About from "../pages/About";
 import Checkout from "../pages/Checkout";
+import Login from "../pages/login/Login";
+import Navbar from "../components/Navbar";
 
 const Sections = () => {
   return (
     <section>
+        <Navbar/>
       <div className="inner-section">
         <Route path="/" component={Products} exact />
         {/* <Route path="/product" component={Details} exact /> */}
@@ -17,6 +20,7 @@ const Sections = () => {
         <Route path="/cart" component={Cart} />
         <Route path="/about" component={About} />
         <Route path="/checkout" component={Checkout} />
+        <Route path="/login" component={Login} />
       </div>
     </section>
   );

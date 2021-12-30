@@ -31,14 +31,14 @@ section {
   background-color: white;
   margin-bottom: 25px;
   margin-top: 50px;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   width: 100%;
   margin: 25px auto;
 }
 
 .inner-section {
   padding: 15px 10px;
-  box-shadow: 0 0 10px #ac0d0d;
+  /* box-shadow: 0 0 10px #ac0d0d; */
   margin: 25px;
   min-width: 300px;
   border-radius: 5px;

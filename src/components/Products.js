@@ -7,14 +7,16 @@ const Products = () => {
   const { products } = useContext(StoreContext);
 
   return (
-    <div id="product">
-      {products ? (
-        products?.map((product) => (
-          <Product key={product.id} product={product} />
-        ))
-      ) : (
-        <h2>Loading...</h2>
-      )}
+    <div className="product-wrapper">
+      <div id="product" >
+        {products ? (
+          products?.map((product) => (
+            <Product key={product.id} product={product} />
+          ))
+        ) : (
+          <h2>Loading...</h2>
+        )}
+      </div>
     </div>
   );
 };
