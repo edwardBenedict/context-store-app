@@ -28,3 +28,14 @@
     font-family: "Girassol", cursive;
     font-size: 1rem;
 }
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.inputDiv{
+    display: flex;
+    align-items: center;
+}

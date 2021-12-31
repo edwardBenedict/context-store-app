@@ -25,13 +25,16 @@ const Navbar = () => {
       <nav>
         <ul className={toggle ? "toggle" : ""}>
           <li>
-            <Link to="/" onClick={menuToggle}>Product</Link>
+            <Link to="/" onClick={menuToggle}>Shop</Link>
           </li>
           <li>
             <Link to="/about" onClick={menuToggle}>About</Link>
           </li>
           <li>
             <Link to="/login" onClick={menuToggle}>Login</Link>
+          </li>
+          <li>
+            <Link to="/register" onClick={menuToggle}>Register</Link>
           </li>
           <li className="close" onClick={menuToggle}>
             <img src={cancelSvg} alt="" width="20" />

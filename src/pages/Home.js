@@ -7,6 +7,7 @@ import Cart from "../pages/Cart";
 import About from "../pages/About";
 import Checkout from "../pages/Checkout";
 import Login from "../pages/login/Login";
+import Register from "../pages/register/Register";
 import Navbar from "../components/Navbar";
 
 const Sections = () => {
@@ -21,6 +22,7 @@ const Sections = () => {
         <Route path="/about" component={About} />
         <Route path="/checkout" component={Checkout} />
         <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
       </div>
     </section>
   );

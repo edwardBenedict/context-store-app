@@ -1,0 +1,19 @@
+.primary {
+  background-color: #343a40;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  font-family: "Girassol", cursive;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.secondary {
+  background-color: white;
+  padding: 5px;
+  color: #343a40;
+  border-radius: 5px;
+  font-family: "Girassol", cursive;
+  font-size: 1rem;
+  width: 100%;
+}
