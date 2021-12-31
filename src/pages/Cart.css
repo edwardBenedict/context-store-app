@@ -1,7 +1,12 @@
-section .cart {
+.cart-wrapper .cart {
   position: relative;
   border: 1px solid #ccc;
 }
+
+.cart{
+  background-color: white;
+}
+
 .amount span {
   color: #ac0d0d;
   padding: 0 20px;
@@ -36,11 +41,7 @@ section .cart {
 }
 .total a {
   text-decoration: none;
-  text-transform: uppercase;
-  background: wheat;
-  color: black;
-  letter-spacing: 2px;
-  padding: 10px 25px;
+  width: 150px;
 }
 .total h3 {
   /* margin-right: 50px; */

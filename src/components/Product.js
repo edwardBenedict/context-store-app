@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { StoreContext } from "../contexts/StoreContext";
+import CustomButton from "./button/Button";
 
 const Products = ({ product }) => {
   const { addCart } = useContext(StoreContext);
@@ -18,7 +19,7 @@ const Products = ({ product }) => {
         </h3>
         <span>${product?.price}</span>
         <p>{product?.description}</p>
-        <button onClick={() => addCart(product?.id)} >Add to cart</button>
+        <CustomButton  onClick={() => addCart(product?.id)} label="Add to cart" />
       </div>
     </div>
   );

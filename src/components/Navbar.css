@@ -7,6 +7,9 @@ header {
   color: white;
   background-color: #343A40;
   box-shadow: 0 0 25px #343A40;
+  position: sticky; 
+  top: 0; 
+  border-radius:0 0 5px 5px
 }
 header .logo a {
   text-decoration: none;
@@ -56,7 +59,7 @@ nav .nav-cart span {
   color: white;
   padding: 3px 5px;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 9999;
 }
 header .menu,
 header .close {

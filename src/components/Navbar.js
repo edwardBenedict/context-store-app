@@ -15,7 +15,7 @@ const Navbar = () => {
     setToggle(!toggle);
   };
   return (
-    <header style={{ position: "sticky", top: 0 }}>
+    <header >
       <div className="menu" onClick={menuToggle}>
         <img src={menuSvg} alt="" width="20" />
       </div>

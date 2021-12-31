@@ -12,8 +12,10 @@ import Navbar from "../components/Navbar";
 
 const Sections = () => {
   return (
-    <section>
+    <div>
+      
         <Navbar/>
+    <section>
       <div className="inner-section">
         <Route path="/" component={Products} exact />
         {/* <Route path="/product" component={Details} exact /> */}
@@ -25,6 +27,7 @@ const Sections = () => {
         <Route path="/register" component={Register} />
       </div>
     </section>
+    </div>
   );
 };
 
