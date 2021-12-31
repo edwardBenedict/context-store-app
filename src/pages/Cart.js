@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from "react";
 import { StoreContext } from "../contexts/StoreContext";
 import { Link } from "react-router-dom";
 import shopSvg from "../assets/shop.svg";
-import { ReactComponent as CloseSvg } from "../assets/close.svg";
 import RubbishIcon from "../assets/icons/Rubbish";
 
 import "../components/Details.css";
@@ -34,16 +33,12 @@ const Cart = () => {
                 <p className="category">{item?.category}</p>
                 <p>{item?.description}</p>
                 <div style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
-                  <div className="amount">
-                  <button className="count" onClick={() => reduction(item?.id)}>
-                    -
-                  </button>
-                  <span>{item?.count}</span>
-                  <button className="count" onClick={() => increase(item?.id)}>
-                    +
-                  </button>
+                  <div style={{display:"flex", justifyContent:"center",alignItems:"center"}}>
+                    <CustomButton label="-" width="40px" color="red" onClick={() => reduction(item?.id)}/>
+                  <span style={{width:"25px", textAlign:"center", fontSize:"1.25rem"}}>{item?.count}</span>
+                  <CustomButton label="+" width="40px" color="green" onClick={() => increase(item?.id)}/>
                   </div>
-                  <RubbishIcon size="30" style={{cursor:"pointer"}} onClick={() => removeProduct(item?.id)} />
+                  <RubbishIcon size="30" style={{cursor:"pointer"}} color="red" onClick={() => removeProduct(item?.id)} />
                 </div>
               </div>
               {/* <div className="delete" onClick={() => removeProduct(item?.id)}>

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Button.module.css";
 
-const CustomButton = ({ label, type, primary, onClick, width }) => {
+const CustomButton = ({ label, type, primary, onClick, width, color }) => {
   let handleClick = () => {
     if(onClick){
       onClick();
@@ -14,7 +14,7 @@ const CustomButton = ({ label, type, primary, onClick, width }) => {
         className={primary ? styles.primary : styles.secondary}
         type={type || "button"}
         onClick={handleClick}
-        style={{width: width || "100%"}}
+        style={{width: width || "100%", color: color || "black"}}
       >
         {label || "Button"}
       </button>
