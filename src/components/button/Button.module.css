@@ -6,6 +6,7 @@
   font-family: "Girassol", cursive;
   font-size: 1rem;
   width: 100%;
+  cursor: pointer;
 }
 
 .secondary {
@@ -16,4 +17,5 @@
   font-family: "Girassol", cursive;
   font-size: 1rem;
   width: 100%;
+  cursor: pointer;
 }

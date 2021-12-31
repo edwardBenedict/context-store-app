@@ -19,7 +19,7 @@ const Products = ({ product }) => {
         </h3>
         <span>${product?.price}</span>
         <p>{product?.description}</p>
-        <CustomButton  onClick={() => addCart(product?.id)} label="Add to cart" />
+        <CustomButton  onClick={() => addCart(product?.id)} label="Add to cart" color="white" />
       </div>
     </div>
   );

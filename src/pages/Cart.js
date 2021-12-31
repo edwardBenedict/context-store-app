@@ -32,13 +32,52 @@ const Cart = () => {
                 </div>
                 <p className="category">{item?.category}</p>
                 <p>{item?.description}</p>
-                <div style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
-                  <div style={{display:"flex", justifyContent:"center",alignItems:"center"}}>
-                    <CustomButton label="-" width="40px" color="red" onClick={() => reduction(item?.id)}/>
-                  <span style={{width:"25px", textAlign:"center", fontSize:"1.25rem"}}>{item?.count}</span>
-                  <CustomButton label="+" width="40px" color="green" onClick={() => increase(item?.id)}/>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <CustomButton
+                      label="-"
+                      width="40px"
+                      color="red"
+                      onClick={() => {
+                        item?.count === 1
+                          ? removeProduct(item?.id)
+                          : reduction(item?.id);
+                      }}
+                    />
+                    <span
+                      style={{
+                        width: "25px",
+                        textAlign: "center",
+                        fontSize: "1.25rem",
+                      }}
+                    >
+                      {item?.count}
+                    </span>
+                    <CustomButton
+                      label="+"
+                      width="40px"
+                      color="green"
+                      onClick={() => increase(item?.id)}
+                    />
                   </div>
-                  <RubbishIcon size="30" style={{cursor:"pointer"}} color="red" onClick={() => removeProduct(item?.id)} />
+                  <RubbishIcon
+                    size="30"
+                    style={{ cursor: "pointer" }}
+                    color="red"
+                    onClick={() => removeProduct(item?.id)}
+                  />
                 </div>
               </div>
               {/* <div className="delete" onClick={() => removeProduct(item?.id)}>
@@ -83,7 +122,7 @@ const Cart = () => {
         <div className="total">
           {/* <Link to="/checkout">Payment</Link> */}
           <Link to="/checkout">
-            <CustomButton label="Checkout" primary />
+            <CustomButton label="Checkout" primary color="white"/>
           </Link>
           <h3>Total : ${total}</h3>
         </div>
