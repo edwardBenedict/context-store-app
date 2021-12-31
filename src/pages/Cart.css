@@ -1,5 +1,5 @@
 .cart-wrapper .cart {
-  position: relative;
+  /* position: relative; */
   border: 1px solid #ccc;
 }
 
@@ -21,7 +21,7 @@
   border-radius: 3px;
 }
 .delete {
-  position: absolute;
+  /* position: absolute; */
   top: 10px;
   right: 10px;
   cursor: pointer;

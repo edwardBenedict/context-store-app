@@ -3,6 +3,7 @@ import { StoreContext } from "../contexts/StoreContext";
 import { Link } from "react-router-dom";
 import shopSvg from "../assets/shop.svg";
 import { ReactComponent as CloseSvg } from "../assets/close.svg";
+import RubbishIcon from "../assets/icons/Rubbish";
 
 import "../components/Details.css";
 import "./Cart.css";
@@ -32,7 +33,8 @@ const Cart = () => {
                 </div>
                 <p className="category">{item?.category}</p>
                 <p>{item?.description}</p>
-                <div className="amount">
+                <div style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
+                  <div className="amount">
                   <button className="count" onClick={() => reduction(item?.id)}>
                     -
                   </button>
@@ -40,11 +42,13 @@ const Cart = () => {
                   <button className="count" onClick={() => increase(item?.id)}>
                     +
                   </button>
+                  </div>
+                  <RubbishIcon size="30" style={{cursor:"pointer"}} onClick={() => removeProduct(item?.id)} />
                 </div>
               </div>
-              <div className="delete" onClick={() => removeProduct(item?.id)}>
+              {/* <div className="delete" onClick={() => removeProduct(item?.id)}>
                 <CloseSvg fill="#ac0d0d" stroke="wheat" className="close" />
-              </div>
+              </div> */}
             </div>
           ))
         ) : (
