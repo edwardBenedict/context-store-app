@@ -1,4 +1,5 @@
 import React from "react";
+import Github from "../assets/icons/Github";
 import aboutSvg from "../assets/work_together.svg";
 
 const About = () => {
@@ -9,6 +10,8 @@ const About = () => {
         flexDirection: "column",
         justifyContent: "center",
         height: "calc(100vh - 175px)",
+        border: "1px solid black",
+        backgroundColor: "white",
       }}
     >
       <h1 style={{ textAlign: "center" }}>
@@ -35,6 +38,13 @@ const About = () => {
           <a href="mailto:edwardbenedict92@gmail.com">Send email</a> :
           edwardbenedict92@gmail.com
         </p>
+        <a
+          href="https://github.com/edwardBenedict"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Visit my Github <Github size="24px" />
+        </a>
       </div>
     </div>
   );

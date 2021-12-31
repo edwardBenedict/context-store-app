@@ -29,15 +29,15 @@ const Login = () => {
             required
             />
           <CustomInput
-            required
             name="password"
             type="password"
             value={info.password}
             placeholder="Password"
             label="Password"
             onChange={handleChange}
+            required
           />
-          <CustomButton type="submit" primary/>
+          <CustomButton type="submit" primary color="white"/>
         </form>
       </div>
     </div>

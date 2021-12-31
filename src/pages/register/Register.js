@@ -51,7 +51,7 @@ const Login = () => {
             value={info.value}
             required
           />
-          <CustomButton type="submit" label="Login" primary/>
+          <CustomButton type="submit" label="Login" primary color="white"/>
         </form>
       </div>
     </div>

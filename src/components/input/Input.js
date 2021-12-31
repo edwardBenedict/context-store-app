@@ -10,7 +10,7 @@ const CustomInput = ({ value, required, name, label, type, onChange, placeholder
     <div className={styles.inputWrapper}>
       <label htmlFor={name}>{label}</label>
       <div className={styles.inputDiv}>
-        {name === "password" || "password2" ? (
+        {name === "password" || name === "password2" ? (
           <PasswordIcon />
         ) : name === "email" ? (
           <MailIcon />
