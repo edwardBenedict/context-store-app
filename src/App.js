@@ -1,5 +1,5 @@
 import { BrowserRouter as Router } from "react-router-dom";
-import Home from "./pages/Home";
+import AppRouter from "./pages/AppRouter";
 import { StoreContextProvider } from "./contexts/StoreContext";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <StoreContextProvider>
       <div className="app">
         <Router>
-          <Home />
+          <AppRouter />
         </Router>
       </div>
     </StoreContextProvider>

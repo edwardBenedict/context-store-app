@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import style from "./Login.module.css";
 import CustomButton from "../../components/button/Button";
 import CustomInput from "../../components/input/Input";
+import { useHistory } from "react-router-dom";
 
 const Login = () => {
+  let history = useHistory();
   const [info, setInfo] = useState({ email: "", password: "" });
 
   const handleChange = (e) => {
@@ -13,6 +15,8 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(info);
+    history.push("/admin");
+
   };
   return (
     <div className={style.loginWrapper}>

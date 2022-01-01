@@ -1,0 +1,22 @@
+.adminWrapper {
+    background-color: white;
+    min-height: 500px;
+    border-radius: 5px;
+}
+
+.adminWrapper h2 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.product{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.product a {
+    width: 40%;
+    margin: 10px;
+}

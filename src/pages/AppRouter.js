@@ -3,12 +3,14 @@ import { Route } from "react-router-dom";
 // import Product from "../components/Product";
 import Details from "../components/Details";
 import Products from "../components/Products";
-import Cart from "../pages/Cart";
-import About from "../pages/About";
-import Checkout from "../pages/Checkout";
-import Login from "../pages/login/Login";
-import Register from "../pages/register/Register";
+import Cart from "./Cart";
+import About from "./About";
+import Checkout from "./Checkout";
+import Login from "./login/Login";
+import Register from "./register/Register";
 import Navbar from "../components/Navbar";
+import Admin from "./admin/Admin";
+
 
 const Sections = () => {
   return (
@@ -25,6 +27,7 @@ const Sections = () => {
         <Route path="/checkout" component={Checkout} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
+        <Route path="/admin" component={Admin} />
       </div>
     </section>
    
