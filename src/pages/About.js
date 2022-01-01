@@ -35,8 +35,9 @@ const About = () => {
           Python, AWS Services.
         </p>
         <p>
-          <a href="mailto:edwardbenedict92@gmail.com">Send email</a> :
-          edwardbenedict92@gmail.com
+          <a href="mailto:edwardbenedict92@gmail.com">
+            Send email : edwardbenedict92@gmail.com
+          </a>
         </p>
         <a
           href="https://github.com/edwardBenedict"

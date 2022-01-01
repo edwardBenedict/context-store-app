@@ -3,7 +3,7 @@
   border: 1px solid #ccc;
 }
 
-.cart{
+.cart {
   background-color: white;
 }
 
@@ -50,4 +50,32 @@
   letter-spacing: 2px;
   background-color: #ac0d0d;
   border-radius: 5px;
+}
+
+.bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-wrapper span {
+  width: 25px;
+  text-align: center;
+  font-size: 1.25rem;
+}
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.empty-cart img {
+  align-self: center;
+  margin: 10px;
 }

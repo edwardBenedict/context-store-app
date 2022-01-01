@@ -32,20 +32,8 @@ const Cart = () => {
                 </div>
                 <p className="category">{item?.category}</p>
                 <p>{item?.description}</p>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
+                <div className="bottom-wrapper">
+                  <div>
                     <CustomButton
                       label="-"
                       width="40px"
@@ -56,13 +44,7 @@ const Cart = () => {
                           : reduction(item?.id);
                       }}
                     />
-                    <span
-                      style={{
-                        width: "25px",
-                        textAlign: "center",
-                        fontSize: "1.25rem",
-                      }}
-                    >
+                    <span                  >
                       {item?.count}
                     </span>
                     <CustomButton
@@ -87,42 +69,26 @@ const Cart = () => {
           ))
         ) : (
           <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
+          className="empty-cart"
+        
           >
             <div className="empty-cart">
               <p>Your cart is empty!</p>
-              <Link
-                to={`/`}
-                style={{
-                  textDecoration: "none",
-                  display: "block",
-                  width: "200px",
-                  padding: "10px",
-                  backgroundColor: "wheat",
-                  borderRadius: "10px",
-                  color: "black",
-                }}
-              >
-                Go Shopping
+              <Link to={`/`}>
+                <CustomButton label="Shop Now" />
               </Link>
             </div>
             <img
               src={shopSvg}
               alt="goshop"
               width="100"
-              style={{ alignSelf: "center", margin: "10px" }}
             />
           </div>
         )}
         <div className="total">
           {/* <Link to="/checkout">Payment</Link> */}
           <Link to="/checkout">
-            <CustomButton label="Checkout" primary color="white"/>
+            <CustomButton label="Checkout" primary color="white" />
           </Link>
           <h3>Total : ${Math.round(total * 100) / 100}</h3>
         </div>
