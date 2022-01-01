@@ -124,7 +124,7 @@ const Cart = () => {
           <Link to="/checkout">
             <CustomButton label="Checkout" primary color="white"/>
           </Link>
-          <h3>Total : ${total}</h3>
+          <h3>Total : ${Math.round(total * 100) / 100}</h3>
         </div>
       </div>
     </div>
